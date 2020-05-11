@@ -40,17 +40,17 @@ client.on('message', message => {
             // An error happened
             // This is generally due to the bot not being able to kick the member,
             // either due to missing permissions or role hierarchy
-            message.reply('I was unable to kick the member');
+            message.reply('Oi. That would be self harm.');
             // Log the error
             console.error(err);
           });
       } else {
         // The mentioned user isn't in this guild
-        message.reply("That user isn't in this guild!");
+        message.reply("Weird error. Please message Macca#5264");
       }
       // Otherwise, if no user was mentioned
     } else {
-      message.reply("You didn't mention the user to kick!");
+      message.reply("You didn't mention the user to slap!");
     }
   }
 });
