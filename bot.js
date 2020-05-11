@@ -19,6 +19,7 @@ client.on('message', message => {
     // Assuming we mention someone in the message, this will return the user
     // Read more about mentions over at https://discord.js.org/#/docs/main/master/class/MessageMentions
     const user = message.mentions.users.first();
+    const user = message.member;
     // If we have a user mentioned
     if (user) {
       // Now we get the member from the user
@@ -31,7 +32,7 @@ client.on('message', message => {
          * There are big differences between a user and a member
          */
         member
-          .send(`:O You just got slapped by ${member.tag}`)
+          .send(`:O You just got slapped by ${.name}`)
           .then(() => {
             // We let the message author know we were able to kick the person
             message.reply(`Successfully slapped ${user.tag}`);
