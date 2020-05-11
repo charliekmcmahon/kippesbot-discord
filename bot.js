@@ -31,7 +31,7 @@ client.on('message', message => {
          * There are big differences between a user and a member
          */
         member
-          .send('f')
+          .send(`:O You just got slapped by ${sender.tag}`)
           .then(() => {
             // We let the message author know we were able to kick the person
             message.reply(`Successfully slapped ${user.tag}`);
