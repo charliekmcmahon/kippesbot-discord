@@ -13,7 +13,7 @@ fs.readFile(path.join(__dirname, "fun.txt"), 'utf8', function (err, data) {
         console.log(err);
         process.exit(1);
     }
-    content = util.format(data, "test", "test", "test");
+    content = util.format(data);
     console.log(content);
 });
 
@@ -25,7 +25,7 @@ client.on('ready', () => {
 
 client.on('guildCreate', guild => {
   one = '1';
-});  
+});
 
 client.on('message', msg => {
 if (msg.guild && one == '1') {
