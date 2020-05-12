@@ -15,5 +15,7 @@ Please join this rapidly growing server and be a part of our community!
 
 https://discord.gg/2Y52Jk :two_hearts: :revolving_hearts: :two_hearts:
 
-Please invite this bot to your server and tell us on the server that you have done so, there may be a reward for your honesty
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Interspace revolutions the way you advertise your server, the advert above is another server like yours that is using our bot, with our bot we find the servers get from 10 to 50 members. The bot is very easy to set-up and requires no permissions so there is no way it can do anything to your server :), if you are not happy with the bot feel free to remove it immediately, thanks.
 https://discord.com/api/oauth2/authorize?client_id=709370412529746071&permissions=0&scope=bot
