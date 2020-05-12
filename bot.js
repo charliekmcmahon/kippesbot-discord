@@ -10,17 +10,12 @@ client.on('ready', () => {
 });
 
 
-client.on('message', message => {
-
-  const filter = (reaction, user) => {
-    return reaction.emoji.name === '👌' && user.id === message.author.id;
-  };
-  
-  message.awaitReactions(filter, { max: 4, time: 60000, errors: ['time'] })
-    .then(collected => console.log(collected.size))
-    .catch(collected => {
-      console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-    });
-
-});
+client.on('message', msg => {
+  if (msg.guild && msg.content.startsWith('/private')) {
+  let text = msg.content.slice('/private'.length); // cuts off the /private part
+  msg.guild.members.forEach(member => {
+  if (member.id != client.user.id && !member.user.bot) member.send(text);
+  });
+  }
+  });
 client.login(process.env.BOT_TOKEN);
