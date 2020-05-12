@@ -34,16 +34,9 @@ client.on('message', message => {
       message.reply("You didn't mention the user to slap!");
     }
   }
-  if (message.content === '!test-react') {
-    const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'ok');
-    message.react(emoji);
-  }
-message.react('👍').then(() => message.react('👎'));
-
 const filter = (reaction, user) => {
 	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
 };
-
 message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
