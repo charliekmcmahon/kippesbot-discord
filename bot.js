@@ -34,5 +34,5 @@ client.on('message', message => {
       message.reply("You didn't mention the user to slap!");
     }
   }
-};
+});
 client.login(process.env.BOT_TOKEN);
