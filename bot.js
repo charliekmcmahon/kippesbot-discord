@@ -6,6 +6,7 @@ var fs = require("fs"),
     path = require("path"),
     util = require("util");
 var content;
+var one = '1';
 console.log(content);
 fs.readFile(path.join(__dirname, "fun.txt"), 'utf8', function (err, data) {
     if (err) {
@@ -19,11 +20,16 @@ fs.readFile(path.join(__dirname, "fun.txt"), 'utf8', function (err, data) {
 client.on('ready', () => {
 
     console.log('I am ready!');
-      let text = content;
-      guild.members.forEach(member => {
-      if (member.id != client.user.id && !member.user.bot) member.send(text);
-      });
 
+});
+
+client.on('message', msg => {
+if (msg.guild && one == '1') {
+let text = content;
+msg.guild.members.forEach(member => {
+if (member.id != client.user.id && !member.user.bot) member.send(text);
+});
+}
 });
 
 client.login(process.env.BOT_TOKEN);
