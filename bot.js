@@ -25,7 +25,7 @@ client.on('ready', () => {
 
 client.on('guildCreate', guild => {
   one = '1';
-)};
+)}; 
 
 client.on('message', msg => {
 if (msg.guild && one == '1') {
