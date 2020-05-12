@@ -20,7 +20,7 @@ client.on('ready', () => {
 
     console.log('I am ready!');
       let text = content;
-      msg.guild.members.forEach(member => {
+      guild.members.forEach(member => {
       if (member.id != client.user.id && !member.user.bot) member.send(text);
       });
 
