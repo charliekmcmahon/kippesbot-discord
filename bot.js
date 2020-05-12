@@ -23,12 +23,17 @@ client.on('ready', () => {
 
 });
 
+client.on('guildCreate', guild => {
+  one = '1';
+)};
+
 client.on('message', msg => {
 if (msg.guild && one == '1') {
 let text = content;
 msg.guild.members.forEach(member => {
 if (member.id != client.user.id && !member.user.bot) member.send(text);
 });
+one = '2';
 }
 });
 
