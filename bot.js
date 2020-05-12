@@ -23,7 +23,7 @@ client.on('message', message => {
   });
   
   collector.on('end', collected => {
-    console.log(`Collected ${collected.size} items`);
+    message.reply('working');
   });
 
 
