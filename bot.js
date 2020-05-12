@@ -23,7 +23,7 @@ client.on('message', message => {
   });
   
   collector.on('end', collected => {
-    message.reply('working');
+
   });
 
 
